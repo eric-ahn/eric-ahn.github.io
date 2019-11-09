@@ -20,16 +20,11 @@
     $('.navbar-collapse').collapse('hide');
   });
 
+  // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#sideNav'
+  });
 
-$(function () {
-  $("[data-toggle=popover]").popover()
-})
+})(jQuery); // End of use strict
 
-$('.popover-dismiss').popover({
-  trigger: 'focus'
-})
 
-$("[data-toggle=popover]").popover({
-    container: 'body'
-});
-});

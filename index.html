@@ -18,10 +18,26 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
   
-  <script src="vendor/jquery/jquery.min.js"></script>
+  
+<script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/resume.js"></script>
-  <script>$.noConflict(true);</script>
+<script>
+var $j = jQuery.noConflict(true);
+$j(document).ready(function () {
+  $j("[data-toggle=popover]").popover()
+})
+
+$j('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+
+$j("[data-toggle=popover]").popover({
+    container: 'body'
+});
+</script>
+
+
 
 
   <!--JQuery-->
@@ -33,6 +49,15 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.css' type='text/css' />
 
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/themes/default/ug-theme-default.js'></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+
+			jQuery("#gallery").unitegallery();
+
+		});
+  </script>
+
+	
 
 
   <!-- Custom styles for this template -->
@@ -600,15 +625,8 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-</script>
   
-    <script type="text/javascript">
-		jQuery(document).ready(function(){
-
-			jQuery("#gallery").unitegallery();
-
-		});
-  </script>
+    
 
 
 </body>
